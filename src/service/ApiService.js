@@ -50,7 +50,7 @@ export default class ApiService {
 
 
     static async getUserBookings(userId) {
-        const response = await axios.get(`${this.BASE_URL}/users/-user-bookings/${userId}`, {
+        const response = await axios.get(`${this.BASE_URL}/users/user-bookings/${userId}`, {
             headers: this.getHeader()
         })
         return response.data

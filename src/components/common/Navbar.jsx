@@ -22,17 +22,17 @@ function Navbar(){
                     <NavLink to={"/home"}>Rest Hotel</NavLink>
                 </div>
                 <ul className="navbar-ul">
-                    <li><NavLink to={"/home"} activeClass="active">Home</NavLink></li>
-                    <li><NavLink to={"/rooms"} activeClass="active">Rooms</NavLink></li>
-                    <li><NavLink to={"/find-booking"} activeClass="active">Find My Bookings</NavLink></li>
+                    <li><NavLink to={"/home"} activeclassname="active">Home</NavLink></li>
+                    <li><NavLink to={"/rooms"} activeclassname="active">Rooms</NavLink></li>
+                    <li><NavLink to={"/find-booking"} activeclassname="active">Find My Bookings</NavLink></li>
 
-                    {isUser && <li><NavLink to={"/profile"} activeClass="active">profile</NavLink></li>}
-                    {isAdmin && <li><NavLink to={"/admin"} activeClass="active">Admin</NavLink></li>}
+                    {isUser && <li><NavLink to={"/profile"} activeclassname="active">Profile</NavLink></li>}
+                    {isAdmin && <li><NavLink to={"/admin"} activeclassname="active">Admin</NavLink></li>}
 
-                    {!isAuthenticaded && <li><NavLink to={"/login"} activeClass="active">Login</NavLink></li>}
-                    {!isAuthenticaded && <li><NavLink to={"/register"} activeClass="active">Register</NavLink></li>}
+                    {!isAuthenticaded && <li><NavLink to={"/login"} activeclassname="active">Login</NavLink></li>}
+                    {!isAuthenticaded && <li><NavLink to={"/register"} activeclassname="active">Register</NavLink></li>}
 
-                    {isAuthenticaded && <li onClick={handleLogout}></li>}
+                    {isAuthenticaded && <li> <a href="#!" onClick={handleLogout} className="logout-link">Logout</a></li>}
                 </ul>
         </nav>
     )
