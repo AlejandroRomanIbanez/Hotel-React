@@ -7,6 +7,7 @@ import Footer from './components/common/Footer';
 import HomePage from './components/home/homePage';
 import AllRoomsPage from './components/booking_rooms/AllRoomsPage';
 import FindBookingPage from './components/booking_rooms/FindBookingPage';
+import RoomDetailsPage from './components/booking_rooms/RoomDetailsPage';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/home" element={<HomePage/>}/>
           <Route exact path="/rooms" element={<AllRoomsPage/>}/>
           <Route exact path="/find-booking" element={<FindBookingPage/>}/>
+          <Route exact path="/room-details-book/:roomId" element={<RoomDetailsPage/>}/>
         </Routes>
       </div>
       <Footer/>
