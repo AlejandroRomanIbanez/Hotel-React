@@ -702,6 +702,13 @@ button:hover {
   border-radius: 4px;
   padding: 10px;
 }
+.booking-details img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 10px;
+}
 
 p {
   margin: 5px 0;

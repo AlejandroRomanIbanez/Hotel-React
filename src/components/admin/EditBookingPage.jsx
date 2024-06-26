@@ -15,7 +15,13 @@ const EditBookingPage = () => {
         const fetchBookingDetails = async () => {
             try {
                 const response = await ApiService.getBookingByConfirmationCode(bookingCode);
+                if (response.booking) {
                 setBookingDetails(response.booking);
+                setError(null);
+            } else {
+                setError("Booking not found");
+                setTimeout(() => setError(''), 5000);
+            }
             } catch (error) {
                 setError(error.message);
             }
@@ -64,7 +70,7 @@ const EditBookingPage = () => {
                     <br />
                     <hr />
                     <br />
-                    <h3>Booker Detials</h3>
+                    <h3>Booker Details</h3>
                     <div>
                         <p> Name: {bookingDetails.user.name}</p>
                         <p> Email: {bookingDetails.user.email}</p>

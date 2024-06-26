@@ -15,8 +15,13 @@ const FindBookingPage = () => {
         try {
             
             const response = await ApiService.getBookingByConfirmationCode(confirmationCode);
-            setBookingDetails(response.booking);
-            setError(null);
+            if (response.booking) {
+                setBookingDetails(response.booking);
+                setError(null);
+            } else {
+                setError("Booking not found");
+                setTimeout(() => setError(''), 5000);
+            }
         } catch (error) {
             setError(error.response?.data?.message || error.message);
             setTimeout(() => setError(''), 5000);
