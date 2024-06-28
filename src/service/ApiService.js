@@ -2,7 +2,7 @@ import axios from "axios"
 
 export default class ApiService {
 
-    static BASE_URL = "http://localhost:5454"
+    static BASE_URL = "https://hotel-manager-rmk7iqireq-ew.a.run.app/"
 
     static getHeader() {
         const token = localStorage.getItem("token");
